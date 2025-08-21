@@ -8,7 +8,7 @@ if(!isset($_SESSION['id'])) {
     exit();
 }
 
-date_default_timezone_set('Asia/Kolkata');
+date_default_timezone_set('Africa/Abuja');
 $date = date('d-m-Y');
 $time = date('h:i:s a');
 
