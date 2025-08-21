@@ -189,36 +189,57 @@ if (isset($_POST['submit'])) {
   </div>
 </nav>
 
-<!-- HERO -->
+<<!-- HERO -->
 <header class="hero py-5 py-lg-6">
   <div class="container">
     <div class="row align-items-center g-4">
+      
+      <!-- Left Text Section -->
       <div class="col-lg-7 text-white">
-        <span class="badge bg-white text-dark fw-semibold mb-3">Business Only</span>
-        <h1 class="display-5 fw-bold">Ship smarter. Move faster. <br/>Go further with <span class="text-warning">DropEx</span>.</h1>
-        <p class="lead mt-3 opacity-90">Air, road, ocean, and rail freight—plus time-critical express. Reliable coverage, transparent tracking, and customer-first support.</p>
+        <span class="badge bg-warning text-dark fw-semibold mb-3">E-Tracking System</span>
+        <h1 class="display-5 fw-bold">
+          Digital Transformation of <br/> 
+          <span class="text-warning">3PL Logistics</span> in Nigeria
+        </h1>
+        <p class="lead mt-3 opacity-90">
+          DropEx is a prototype <strong>E-Tracking System</strong> designed for third-party logistics (3PL) operators.  
+          Built to address challenges of <em>manual waybills, lack of real-time tracking, and customer dissatisfaction</em>,  
+          DropEx enables transparent, fast, and reliable parcel management.
+        </p>
 
         <div class="hero-cta d-flex flex-wrap gap-2 mt-4">
-          <a href="services.html" class="btn btn-highlight">Explore DropEx</a>
-          <a href="tracking.php" class="btn btn-outline-white">Track a Shipment</a>
+          <a href="#about" class="btn btn-highlight">Learn About the System</a>
+          <a href="tracking.php" class="btn btn-outline-white">Track Your Parcel</a>
         </div>
 
         <!-- Quick tracking bar -->
-        <div class="glass mt-4">
+        <div class="glass mt-4 shadow">
           <form class="row g-2" action="tracking.php" method="get" aria-label="Quick tracking form">
             <div class="col-12 col-md">
               <label for="tn" class="form-label visually-hidden">Tracking Number</label>
               <input id="tn" name="tn" class="form-control form-control-lg" placeholder="Enter tracking number…" />
             </div>
             <div class="col-12 col-md-auto">
-              <button class="btn btn-light btn-lg w-100" type="submit"><i class='bx bx-search-alt-2 me-1'></i> Track</button>
+              <button class="btn btn-light btn-lg w-100" type="submit">
+                <i class='bx bx-search-alt-2 me-1'></i> Track
+              </button>
             </div>
           </form>
         </div>
       </div>
 
+      <!-- Right Image Section -->
       <div class="col-lg-5">
-        <img src="Images/bigp.jpg" alt="DropEx logistics hero" class="img-fluid rounded-4 shadow-lg" />
+        <img src="Images/bigp.jpg" 
+             alt="DropEx prototype system" 
+             class="img-fluid rounded-4 shadow-lg border border-3 border-white" />
+        <div class="mt-3 p-3 bg-dark bg-opacity-75 text-white rounded-3 shadow-sm">
+          <h6 class="mb-1">Research Context</h6>
+          <p class="small opacity-85 mb-0">
+            This system is part of the study:  
+            <em>“Design of an E-Tracking System for Third-Party Logistics Operators in Bauchi Metropolis, Nigeria.”</em>
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -267,7 +288,7 @@ if (isset($_POST['submit'])) {
         <div class="card-soft p-4 h-100">
           <div class="icon-pill mb-3"><i class='bx bx-time'></i></div>
           <h5 class="fw-semibold mb-1">Express Delivery</h5>
-          <p class="muted mb-0">Time-critical shipments with guaranteed windows.</p>
+          <p class="muted mb-0">Time-critical shipments with guaranteed delivery windows.</p>
         </div>
       </div>
     </div>
@@ -280,12 +301,21 @@ if (isset($_POST['submit'])) {
     <div class="row g-4 align-items-center">
       <div class="col-lg-6">
         <div class="card-soft p-4 p-md-5">
-          <h2 class="fw-bold mb-3 text-dark">About Us</h2>
-          <p>Welcome to <strong>DropEx</strong>, your trusted partner in global shipping and logistics. We deliver reliable, fast, and seamless solutions across borders—designed around innovation, efficiency, and customer satisfaction.</p>
-          <p>Our mission is to simplify international shipping with end-to-end services for businesses of every size—from parcels to large-scale freight.</p>
+          <h2 class="fw-bold mb-3 text-dark">About DropEx</h2>
+          <p>
+            <strong>DropEx</strong> is more than a logistics provider—it is an <em>E-Tracking System</em> 
+            designed to bring digital transformation to third-party logistics (3PL) in Nigeria and beyond.  
+            Our platform enables real-time parcel tracking, transparent supply chains, and customer trust.
+          </p>
+          <p>
+            <strong>Our Mission:</strong> To simplify shipping by blending innovation, 
+            technology, and efficiency—delivering end-to-end solutions from parcels to bulk freight, 
+            while reducing fraud, delays, and uncertainty in logistics.
+          </p>
           <h5 class="mt-3">Why Choose DropEx?</h5>
           <ul class="mt-2">
-            <li><strong>Global reach</strong> across major hubs and remote locations.</li>
+            <li><strong>Real-time tracking</strong> with instant status updates.</li>
+            <li><strong>Global reach</strong> across major hubs and local networks.</li>
             <li><strong>Fast & secure</strong> handling with precision and care.</li>
             <li><strong>Customer-first</strong> support available 24/7.</li>
             <li><strong>Sustainability</strong> through greener operations.</li>
@@ -306,6 +336,7 @@ if (isset($_POST['submit'])) {
     </div>
   </div>
 </section>
+
 
 <!-- EMPLOYEE OF THE MONTH -->
 <section class="eom section-pad">
