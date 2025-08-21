@@ -3,10 +3,10 @@ session_start();
 include("db_connect.php");
 
 // Check if staff is logged in
-if(!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit();
-}
+// if(!isset($_SESSION['user_id'])) {
+//     header('Location: login.php');
+//     exit();
+// }
 
 // Get staff details
 $staff_id = $_SESSION['user_id'];
@@ -143,7 +143,7 @@ if(isset($_POST['action'])) {
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label>Cost (₹)</label>
+                        <label>Cost (₦)</label>
                         <input type="number" step="0.01" name="cost" class="form-control" required>
                     </div>
                 </div>
@@ -163,7 +163,7 @@ if(isset($_POST['action'])) {
                     <tr>
                         <th>From State</th>
                         <th>To State</th>
-                        <th>Cost (₹)</th>
+                        <th>Cost (₦)</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -172,7 +172,7 @@ if(isset($_POST['action'])) {
                     <tr>
                         <td><?php echo htmlspecialchars($price['state_1']); ?></td>
                         <td><?php echo htmlspecialchars($price['state_2']); ?></td>
-                        <td>₹<?php echo htmlspecialchars(number_format($price['cost'], 2)); ?></td>
+                        <td>₦<?php echo htmlspecialchars(number_format($price['cost'], 2)); ?></td>
                         <td>
                             <button class="btn btn-sm btn-primary" onclick="editPrice(<?php echo $price['id']; ?>)">
                                 Edit
@@ -207,7 +207,7 @@ if(isset($_POST['action'])) {
                         <input type="hidden" name="action" value="edit">
                         <input type="hidden" name="id" id="edit_price_id">
                         <div class="form-group">
-                            <label>Cost (₹)</label>
+                            <label>Cost (₦)</label>
                             <input type="number" step="0.01" name="cost" id="edit_cost" class="form-control" required>
                         </div>
                     </div>
