@@ -57,15 +57,3 @@ Welcome to **DropEx**, an efficient and seamless logistics management system. Dr
    - Start your local server and access the project through `http://localhost/e-tracking-system/`.
 
 ---
-
-## Feedback
-We value your feedback! Share your thoughts about DropEx to help us improve.
-
----
-
-## License
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Thank you for choosing DropEx for your logistics needs! 🚚
