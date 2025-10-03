@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 30, 2025 at 07:47 PM
+-- Generation Time: Oct 03, 2025 at 08:29 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.1.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +40,7 @@ CREATE TABLE `admin_credentials` (
 --
 
 INSERT INTO `admin_credentials` (`admin_id`, `password`, `name`, `email`, `last_login`) VALUES
-('999', '1234', 'Elon Mask', 'iamelon@gmail.com', '2025-01-27 17:32:48');
+('999', '1234', 'Elon Mask', 'iamelon@gmail.com', '2025-10-01 15:02:40');
 
 -- --------------------------------------------------------
 
@@ -129,7 +129,37 @@ INSERT INTO `branches` (`Address`, `city`, `state`, `Contact`, `Email`, `Manager
 ('Tbilisi, Georgia', 'Tbilisi', 'Georgia', 99598765432, 'tbilisi_branch2@gmail.com', 'DE1170'),
 ('Baku, Azerbaijan', 'Baku', 'Azerbaijan', 99498765432, 'baku_branch2@gmail.com', 'DE1171'),
 ('Kabul, Afghanistan', 'Kabul', 'Afghanistan', 93798765432, 'kabul_branch2@gmail.com', 'DE1172'),
-('London, UK', 'London', 'UK', 442071234567, 'london_branch@gmail.com', 'DE9913');
+('London, UK', 'London', 'UK', 442071234567, 'london_branch@gmail.com', 'DE9913'),
+('Bauchi Central Market, Bauchi', 'Bauchi', 'Bauchi', 2348034567890, 'bauchi_central@ummis.com', 'UM1001'),
+('Abubakar Tafawa Balewa University Area, Bauchi', 'Bauchi', 'Bauchi', 2348034567891, 'atbu_bauchi@ummis.com', 'UM1002'),
+('Dass Road, Bauchi', 'Bauchi', 'Bauchi', 2348034567892, 'dass_road@ummis.com', 'UM1003'),
+('Yelwa Tudu, Bauchi', 'Bauchi', 'Bauchi', 2348034567893, 'yelwa_tudu@ummis.com', 'UM1004'),
+('Wunti Market, Bauchi', 'Bauchi', 'Bauchi', 2348034567894, 'wunti_market@ummis.com', 'UM1005'),
+('Victoria Island, Lagos', 'Lagos', 'Lagos', 2348012345678, 'vi_lagos@ummis.com', 'UM1006'),
+('Wuse 2, Abuja', 'Abuja', 'FCT', 2348012345679, 'wuse2_abuja@ummis.com', 'UM1007'),
+('New Market Road, Onitsha', 'Onitsha', 'Anambra', 2348012345680, 'onitsha_main@ummis.com', 'UM1008'),
+('Ring Road, Ibadan', 'Ibadan', 'Oyo', 2348012345681, 'ringroad_ibadan@ummis.com', 'UM1009'),
+('Ahmadu Bello Way, Kaduna', 'Kaduna', 'Kaduna', 2348012345682, 'abway_kaduna@ummis.com', 'UM1010'),
+('Bompai Industrial Area, Kano', 'Kano', 'Kano', 2348012345683, 'bompai_kano@ummis.com', 'UM1011'),
+('Trans Amadi, Port Harcourt', 'Port Harcourt', 'Rivers', 2348012345684, 'transamadi_ph@ummis.com', 'UM1012'),
+('Effurun Roundabout, Warri', 'Warri', 'Delta', 2348012345685, 'effurun_warri@ummis.com', 'UM1013'),
+('Aba Road, Umuahia', 'Umuahia', 'Abia', 2348012345686, 'abaroad_umuahia@ummis.com', 'UM1014'),
+('Maiduguri Monday Market', 'Maiduguri', 'Borno', 2348012345687, 'mondaymarket_maiduguri@ummis.com', 'UM1015'),
+('Bauchi Central Market, Bauchi', 'Bauchi', 'Bauchi', 2348034567890, 'bauchi_central@ummis.com', 'UM1001'),
+('Abubakar Tafawa Balewa University Area, Bauchi', 'Bauchi', 'Bauchi', 2348034567891, 'atbu_bauchi@ummis.com', 'UM1002'),
+('Dass Road, Bauchi', 'Bauchi', 'Bauchi', 2348034567892, 'dass_road@ummis.com', 'UM1003'),
+('Yelwa Tudu, Bauchi', 'Bauchi', 'Bauchi', 2348034567893, 'yelwa_tudu@ummis.com', 'UM1004'),
+('Wunti Market, Bauchi', 'Bauchi', 'Bauchi', 2348034567894, 'wunti_market@ummis.com', 'UM1005'),
+('Victoria Island, Lagos', 'Lagos', 'Lagos', 2348012345678, 'vi_lagos@ummis.com', 'UM1006'),
+('Wuse 2, Abuja', 'Abuja', 'FCT', 2348012345679, 'wuse2_abuja@ummis.com', 'UM1007'),
+('New Market Road, Onitsha', 'Onitsha', 'Anambra', 2348012345680, 'onitsha_main@ummis.com', 'UM1008'),
+('Ring Road, Ibadan', 'Ibadan', 'Oyo', 2348012345681, 'ringroad_ibadan@ummis.com', 'UM1009'),
+('Ahmadu Bello Way, Kaduna', 'Kaduna', 'Kaduna', 2348012345682, 'abway_kaduna@ummis.com', 'UM1010'),
+('Bompai Industrial Area, Kano', 'Kano', 'Kano', 2348012345683, 'bompai_kano@ummis.com', 'UM1011'),
+('Trans Amadi, Port Harcourt', 'Port Harcourt', 'Rivers', 2348012345684, 'transamadi_ph@ummis.com', 'UM1012'),
+('Effurun Roundabout, Warri', 'Warri', 'Delta', 2348012345685, 'effurun_warri@ummis.com', 'UM1013'),
+('Aba Road, Umuahia', 'Umuahia', 'Abia', 2348012345686, 'abaroad_umuahia@ummis.com', 'UM1014'),
+('Maiduguri Monday Market', 'Maiduguri', 'Borno', 2348012345687, 'mondaymarket_maiduguri@ummis.com', 'UM1015');
 
 -- --------------------------------------------------------
 
@@ -279,17 +309,20 @@ INSERT INTO `parcel` (`request_id`, `TrackingID`, `StaffID`, `S_Name`, `S_Add`, 
 (NULL, 374600, 'DE1124', 'dfgsdg', 'sdfgsdg', 'sdfsdf', 'France', 4345, 'fdsgs', 'sdfg', 'sdfgdh', 'Italy', 324, 3.00, 4800.00, '2025-01-21 12:39:40', NULL),
 (NULL, 392643, 'DE1137', 'asfasf', 'wetgtw', 'regq', 'Bangladesh', 2142, 'dfsdf', 'sdg', 'sdg', 'Italy', 3552352, 2.00, 2800.00, '2025-01-20 06:08:44', NULL),
 (NULL, 397641, 'DE1137', 'tahimul', 'Dhaka,mirpur', 'mirpur', 'Bangladesh', 747484884, 'Rahim Ahamed', 'Tokyo,japan,house', 'vision city', 'Japan', 5676567, 6.00, 10800.00, '2025-01-27 06:24:40', NULL),
+(NULL, 414329, 'UM1002', 'Yakubu Garba', 'ATBU Campus, Bauchi', 'Bauchi', '0', 2348034567801, 'Chioma Okafor', 'Wuse 2, Abuja', 'Abuja', '0', 2348012345601, 3.20, 6400.00, '2025-10-03 16:35:36', NULL),
 (NULL, 417492, 'DE8888', 'Tahimul Amin', 'fgdfg', 'dfg', 'Bangladesh', 345, 'dfgd', 'fgdfg', 'dfg', 'Italy', 234, 30.00, 42000.00, '2025-01-21 18:58:52', NULL),
 (NULL, 422046, 'DE1124', 'asfasf', 'wetgtw', 'regq', 'Bangladesh', 2142, 'dfsdf', 'sdg', 'sdg', 'Italy', 3552352, 2.00, 2800.00, '2025-01-20 06:08:44', NULL),
 (NULL, 459215, 'DE1137', 'tahmid', 'hzgzfcxd', 'xcvzxv', 'Bangladesh', 4365, 'sdfd', 'xzdfs', 'dfsdf', 'Italy', 34234, 5.00, 7000.00, '2025-01-23 18:06:52', 0x53637265656e73686f745f323032342d31322d32335f31395f33315f31312e706e67),
 (NULL, 478674, 'DE8888', 'tahimul', 'ert', 'ert', 'Bangladesh', 3425, 'fgdfg', 'fdg', 'sdfg', 'Italy', 345, 21.00, 29400.00, '2025-01-21 18:56:19', NULL),
 (35, 544364, 'DE1137', 'tahmid', 'Gulshan', 'Dhaka', 'Bangladesh', 98765, 'Abir', 'sdfg', 'sjdf', 'Italy', 78654, 100.00, 140000.00, '2025-01-26 12:14:48', 0x53637265656e73686f745f32303235303131372d3136303134377e322e706e67),
 (NULL, 549849, 'DE8888', 'tahimul', 'dfgss', 'dfs', 'Bangladesh', 3453254, 'dsfsdf', 'sdf', 'sdf', 'Italy', 234, 34.00, 47600.00, '2025-01-21 19:11:43', NULL),
+(NULL, 630836, 'UM1003', 'Halima Usman', 'Dass Road, Bauchi', 'Bauchi', '0', 2348034567802, 'Emeka Nwankwo', 'New Market Road, Onitsha', 'Onitsha', '0', 2348012345602, 8.00, 22400.00, '2025-10-03 16:35:36', NULL),
 (NULL, 637927, 'DE1137', 'tahmid', 'werwr', 'werwr', 'Bangladesh', 234124, 'cvgbcb', 'dfgdfgc', 'fvbdfgb', 'Italy', 342, 1.00, 1400.00, '2025-01-23 18:52:38', 0x53637265656e73686f745f323032352d30312d31335f30305f30315f34352e706e67),
 (NULL, 667565, 'DE1137', 'asfasf', 'wetgtw', 'regq', 'Bangladesh', 2142, 'dfsdf', 'sdg', 'sdg', 'Italy', 3552352, 2.00, 2800.00, '2025-01-20 06:08:44', NULL),
 (NULL, 674046, 'DE8888', 'tahimul', 'weyrg', 'dsg', 'Bangladesh', 3463, 'sdfsd', 'dfg', 'dfg', 'Italy', 34535, 5.00, 7000.00, '2025-01-21 18:54:10', NULL),
 (29, 691780, 'DE1137', 'tahimul', 'sdfserg', 'srgserg', 'Bangladesh', 3414, 'fdgdfg', 'sgrg', 'rereg', 'Italy', 24525, 3.00, 4200.00, '2025-01-23 09:17:44', NULL),
 (NULL, 749949, 'DE1137', 'asfasf', 'wetgtw', 'regq', 'Bangladesh', 2142, 'dfsdf', 'sdg', 'sdg', 'Italy', 3552352, 2.00, 2800.00, '2025-01-20 06:08:44', NULL),
+(NULL, 792791, 'UM1001', 'Maryam Suleiman', 'Sabon Gari, Bauchi', 'Bauchi', '0', 2348034567800, 'Ahmed Bello', 'Victoria Island, Lagos', 'Lagos', '0', 2348012345600, 5.50, 13750.00, '2025-10-03 16:35:36', NULL),
 (NULL, 804435, 'DE8888', 'Misbah', 'Dhaka', 'dhaka', 'Bangladesh', 123455, 'Neyamul', 'Italy', 'Paris', 'Italy', 6756342, 2.00, 2800.00, '2025-01-21 17:02:42', NULL),
 (NULL, 841194, 'DE8888', 'tahimul', 'dfg', 'dfgdf', 'Bangladesh', 654, 'tghdfg', 'fddfg', 'dfg', 'Italy', 76543, 3.00, 4200.00, '2025-01-21 18:34:08', NULL),
 (NULL, 860522, 'DE1137', 'tahmid', 'Dhaka,mirpur', 'mirpur', 'Bangladesh', 6545678, 'Rahim Ahamed Khan ', 'Vision City', 'New Elite City', 'UK', 98755677, 89.00, 142400.00, '2025-01-26 18:45:42', NULL),
@@ -420,7 +453,27 @@ INSERT INTO `pricing` (`p_id`, `State_1`, `State_2`, `Cost`) VALUES
 (88, 'Russia', 'Brazil', 1800),
 (89, 'Egypt', 'South Africa', 1900),
 (90, 'Egypt', 'Brazil', 1000),
-(91, 'South Africa', 'Brazil', 1100);
+(91, 'South Africa', 'Brazil', 1100),
+(92, 'Bauchi', 'Lagos', 2500),
+(93, 'Bauchi', 'FCT', 2000),
+(94, 'Bauchi', 'Kano', 1500),
+(95, 'Bauchi', 'Kaduna', 1800),
+(96, 'Lagos', 'FCT', 2200),
+(97, 'Lagos', 'Oyo', 1200),
+(98, 'Lagos', 'Anambra', 2800),
+(99, 'FCT', 'Kaduna', 1000),
+(100, 'Rivers', 'Delta', 1500),
+(101, 'Kano', 'Borno', 2200),
+(102, 'Bauchi', 'Lagos', 2500),
+(103, 'Bauchi', 'FCT', 2000),
+(104, 'Bauchi', 'Kano', 1500),
+(105, 'Bauchi', 'Kaduna', 1800),
+(106, 'Lagos', 'FCT', 2200),
+(107, 'Lagos', 'Oyo', 1200),
+(108, 'Lagos', 'Anambra', 2800),
+(109, 'FCT', 'Kaduna', 1000),
+(110, 'Rivers', 'Delta', 1500),
+(111, 'Kano', 'Borno', 2200);
 
 -- --------------------------------------------------------
 
@@ -453,7 +506,7 @@ INSERT INTO `staff` (`StaffID`, `Name`, `Designation`, `branch`, `Gender`, `DOB`
 ('DE1130', 'Md. Arifur Rahman', 'Manager', 'Russia', 'M', '1987-04-18', '2025-01-13', 47000, 1234876543, 'arifurrahman@gmail.com', 0, '1234'),
 ('DE1131', 'Nashidah Rahman', 'Manager', 'Spain', 'F', '1994-02-22', '2025-01-13', 31000, 7766554433, 'nashidahrahman@gmail.com', 0, '1234'),
 ('DE1135', 'Md. Rakib Hossain', 'Manager', 'Japan', 'M', '1985-04-25', '2025-01-13', 60000, 9876543211, 'rakibhossain@gmail.com', 0, '1234'),
-('DE1137', 'Abdullah Al Noman', 'Manager', 'Bangladesh', 'M', '1992-09-20', '2025-01-13', 48000, 9876543213, 'abdullahnoman@gmail.com', 85, '1234'),
+('DE1137', 'Abdulrahman K Mustapha', 'Manager', 'Nigeria', 'M', '1992-09-20', '2025-01-13', 48000, 9099999999, 'abdulrahmanmustapha@gmail.com', 85, '1234'),
 ('DE1140', 'Rumana Sultana', 'Manager', 'China', 'F', '1984-01-28', '2025-01-13', 60000, 9876543216, 'rumanasultana@gmail.com', 0, '1234'),
 ('DE1141', 'Moinul Haque', 'Manager', 'USA', 'M', '1991-05-16', '2025-01-13', 46000, 9876543217, 'moinulhaque@gmail.com', 0, '1234'),
 ('DE1142', 'Shahed Ali', 'Manager', 'Egypt', 'M', '1988-08-22', '2025-01-13', 55000, 9876543218, 'shahedali@gmail.com', 0, '1234'),
@@ -490,7 +543,22 @@ INSERT INTO `staff` (`StaffID`, `Name`, `Designation`, `branch`, `Gender`, `DOB`
 ('DE6846', 'Abir hasan', 'Staff', NULL, 'M', '2000-07-07', '2002-06-08', 35000, 85588432, 'abiruu@gmail.com', 0, '1234'),
 ('DE7979', 'Rakib Khan', 'Manager', NULL, 'M', '2002-01-01', '2020-02-02', 30000, 123456702, 'rakibkhanii@gmail.com', 0, '1234'),
 ('DE8888', 'Misbah', 'Staff', 'Bangladesh', 'M', '2002-01-01', '2020-01-02', 50000, 123456, 'misbah@gmail.com', 40, '1234'),
-('DE9913', 'Alim Hosaian', 'Manager', 'UK', 'M', '2006-01-07', '2015-07-07', 25000, 87654345, 'alimalim@gmail.com', 25, '1234');
+('DE9913', 'Alim Hosaian', 'Manager', 'UK', 'M', '2006-01-07', '2015-07-07', 25000, 87654345, 'alimalim@gmail.com', 25, '1234'),
+('UM1001', 'Amina Aliyu', 'Manager', 'Bauchi', 'F', '1985-03-15', '2020-01-15', 65000, 2348034567890, 'amina.aliyu@ummis.com', 20, '1234'),
+('UM1002', 'Tanimu Jibril', 'Manager', 'Bauchi', 'M', '1982-07-22', '2019-03-10', 68000, 2348034567891, 'tanimu.jibril@ummis.com', 25, '1234'),
+('UM1003', 'Abdullahi Musa', 'Manager', 'Bauchi', 'M', '1988-11-08', '2021-06-01', 62000, 2348034567892, 'abdullahi.musa@ummis.com', 17, '1234'),
+('UM1004', 'Chinedu Okwu', 'Staff', 'Bauchi', 'M', '1990-05-12', '2022-02-14', 45000, 2348034567893, 'chinedu.okwu@ummis.com', 8, '1234'),
+('UM1005', 'Fatima Ibrahim', 'Staff', 'Bauchi', 'F', '1992-09-18', '2022-08-20', 42000, 2348034567894, 'fatima.ibrahim@ummis.com', 6, '1234'),
+('UM1006', 'Kemi Adebayo', 'Manager', 'Lagos', 'F', '1984-12-03', '2018-04-12', 85000, 2348012345678, 'kemi.adebayo@ummis.com', 25, '1234'),
+('UM1007', 'Ibrahim Yakubu', 'Manager', 'FCT', 'M', '1986-01-25', '2019-07-08', 78000, 2348012345679, 'ibrahim.yakubu@ummis.com', 22, '1234'),
+('UM1008', 'Chioma Nwankwo', 'Manager', 'Anambra', 'F', '1987-04-14', '2020-09-15', 72000, 2348012345680, 'chioma.nwankwo@ummis.com', 18, '1234'),
+('UM1009', 'Adebola Ogundimu', 'Manager', 'Oyo', 'M', '1983-08-30', '2017-11-22', 75000, 2348012345681, 'adebola.ogundimu@ummis.com', 28, '1234'),
+('UM1010', 'Hauwa Garba', 'Manager', 'Kaduna', 'F', '1989-02-17', '2021-01-10', 70000, 2348012345682, 'hauwa.garba@ummis.com', 16, '1234'),
+('UM1011', 'Musa Abdullahi', 'Manager', 'Kano', 'M', '1985-06-09', '2019-05-18', 73000, 2348012345683, 'musa.abdullahi@ummis.com', 21, '1234'),
+('UM1012', 'Emeka Okafor', 'Manager', 'Rivers', 'M', '1988-10-05', '2020-12-03', 76000, 2348012345684, 'emeka.okafor@ummis.com', 19, '1234'),
+('UM1013', 'Blessing Okoro', 'Staff', 'Delta', 'F', '1991-12-20', '2022-03-25', 48000, 2348012345685, 'blessing.okoro@ummis.com', 10, '1234'),
+('UM1014', 'Ikechukwu Eze', 'Staff', 'Abia', 'M', '1993-03-11', '2022-07-14', 46000, 2348012345686, 'ikechukwu.eze@ummis.com', 7, '1234'),
+('UM1015', 'Aisha Mohammed', 'Manager', 'Borno', 'F', '1986-09-28', '2020-04-07', 67000, 2348012345687, 'aisha.mohammed@ummis.com', 17, '1234');
 
 -- --------------------------------------------------------
 
@@ -522,17 +590,20 @@ INSERT INTO `status` (`TrackingID`, `StaffID`, `Dispatched`, `Shipped`, `Out_for
 (374600, 'DE1124', '2025-01-21 12:39:40', NULL, NULL, NULL),
 (392643, 'DE1137', '2025-01-20 06:08:44', NULL, NULL, NULL),
 (397641, 'DE1137', '2025-01-27 06:24:40', NULL, NULL, NULL),
+(414329, 'UM1002', '2025-10-03 16:35:36', '2025-10-03 16:35:36', '2025-10-03 16:35:36', '2025-10-03 16:35:36'),
 (417492, 'DE8888', '2025-01-21 18:58:52', NULL, NULL, NULL),
 (422046, 'DE1124', '2025-01-20 06:08:44', NULL, NULL, NULL),
 (459215, 'DE1137', '2025-01-23 18:06:52', NULL, NULL, NULL),
 (478674, 'DE8888', '2025-01-21 18:56:19', NULL, NULL, NULL),
 (544364, 'DE1137', '2025-01-26 12:14:48', NULL, NULL, NULL),
 (549849, 'DE8888', '2025-01-21 19:11:43', NULL, NULL, NULL),
+(630836, 'UM1003', '2025-10-03 16:35:36', NULL, NULL, NULL),
 (637927, 'DE1137', '2025-01-23 18:52:38', NULL, NULL, NULL),
 (667565, 'DE1137', '2025-01-20 06:08:44', NULL, NULL, NULL),
 (674046, 'DE8888', '2025-01-21 18:54:10', NULL, NULL, NULL),
 (691780, 'DE1137', '2025-01-23 09:17:44', NULL, NULL, NULL),
 (749949, 'DE1137', '2025-01-20 06:08:44', NULL, NULL, NULL),
+(792791, 'UM1001', '2025-10-03 16:35:36', NULL, NULL, NULL),
 (804435, 'DE8888', '2025-01-21 17:02:42', NULL, NULL, NULL),
 (841194, 'DE8888', '2025-01-21 18:34:08', NULL, NULL, NULL),
 (860522, 'DE1137', '2025-01-26 18:45:42', NULL, NULL, NULL),
@@ -564,7 +635,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `created_at`, `last_login`, `name`) VALUES
 (1, 'tahmid', 'tah12@gmail.com', '$2y$10$Jh86wYMLY2Syqa61ISyg5eWG5F89Q3xRf2pyhR3jllTxTt9MB0VKa', '2025-01-15 16:22:17', '2025-01-26 18:44:04', 'Tahamid '),
-(2, 'tahimul', 'tahimul@gmail.com', '$2y$10$vJa4e3a0NpK/smw63UZhJetpeTWoj/6ajtm8Tcx/IQJ8rzQ6/QjC.', '2025-01-15 16:24:21', '2025-01-27 11:30:56', 'Tahimul Amin');
+(2, 'tahimul', 'tahimul@gmail.com', '$2y$10$vJa4e3a0NpK/smw63UZhJetpeTWoj/6ajtm8Tcx/IQJ8rzQ6/QjC.', '2025-01-15 16:24:21', '2025-01-27 11:30:56', 'Tahimul Amin'),
+(3, 'leman', 'lemon@lemon', '$2y$10$CmldEgAJMKE0vYXvPBkhVuViG12lWWP8iVX3oRjOx78YmsMp93oim', '2025-08-21 22:03:03', '2025-10-01 14:04:48', 'abba kalli');
 
 -- --------------------------------------------------------
 
@@ -675,23 +747,17 @@ ALTER TABLE `parcel`
 -- AUTO_INCREMENT for table `pricing`
 --
 ALTER TABLE `pricing`
-  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `branches`
---
-ALTER TABLE `branches`
-  ADD CONSTRAINT `Manager` FOREIGN KEY (`Manager_id`) REFERENCES `staff` (`StaffID`);
 
 --
 -- Constraints for table `feedback`
@@ -704,19 +770,6 @@ ALTER TABLE `feedback`
 --
 ALTER TABLE `online_request`
   ADD CONSTRAINT `fk_users_online_request` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-
---
--- Constraints for table `parcel`
---
-ALTER TABLE `parcel`
-  ADD CONSTRAINT `fk_staff_parcel` FOREIGN KEY (`StaffID`) REFERENCES `staff` (`StaffID`),
-  ADD CONSTRAINT `parcel_ibfk_1` FOREIGN KEY (`request_id`) REFERENCES `online_request` (`serial`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `status`
---
-ALTER TABLE `status`
-  ADD CONSTRAINT `delivery_status` FOREIGN KEY (`TrackingID`) REFERENCES `parcel` (`TrackingID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
