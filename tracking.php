@@ -129,7 +129,7 @@ if (isset($_POST['update'])) {
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>DropEx — Track Shipment</title>
+  <title>Ummi's tracking — Track Shipment</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Fonts & Icons -->
@@ -138,6 +138,7 @@ if (isset($_POST['update'])) {
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style/logo.css" rel="stylesheet">
 
   <!-- SweetAlert -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -176,7 +177,21 @@ if (isset($_POST['update'])) {
 <?php if(isset($_SESSION['user_id'])): ?>
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="Images/logo.png" alt="DropEx" style="height:44px"></a>
+      <a class="navbar-brand" href="#"><div class="navbar-brand-logo" style="display: inline-flex;">
+      <div class="logo-icon">
+        <div class="package-icon"></div>
+        <div class="tracking-dots">
+          <div class="tracking-dot"></div>
+          <div class="tracking-dot"></div>
+          <div class="tracking-dot"></div>
+        </div>
+      </div>
+      <div class="logo-text">
+        <div class="logo-main-text">Ummi's</div>
+        <div class="logo-sub-text">tracking</div>
+        <div class="logo-decorative-line"></div>
+      </div>
+    </div></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
@@ -190,7 +205,21 @@ if (isset($_POST['update'])) {
 <?php else: ?>
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="index.php"><img src="Images/logo.png" alt="DropEx" style="height:44px"></a>
+      <a class="navbar-brand" href="index.php"><div class="navbar-brand-logo" style="display: inline-flex;">
+      <div class="logo-icon">
+        <div class="package-icon"></div>
+        <div class="tracking-dots">
+          <div class="tracking-dot"></div>
+          <div class="tracking-dot"></div>
+          <div class="tracking-dot"></div>
+        </div>
+      </div>
+      <div class="logo-text">
+        <div class="logo-main-text">Ummi's</div>
+        <div class="logo-sub-text">tracking</div>
+        <div class="logo-decorative-line"></div>
+      </div>
+    </div></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
@@ -201,7 +230,7 @@ if (isset($_POST['update'])) {
             <li class="nav-item"><a class="nav-link" href="staff.php">Dashboard</a></li>
             <li class="nav-item"><a class="nav-link text-danger" href="logout.php"><i class='bx bx-log-out-circle me-1'></i> Logout</a></li>
           <?php else: ?>
-            <li class="nav-item"><a class="btn btn-sm btn-outline-primary px-3" href="login.php">DropEx Login</a></li>
+            <li class="nav-item"><a class="btn btn-sm btn-outline-primary px-3" href="login.php">Ummi's tracking Login</a></li>
           <?php endif; ?>
         </ul>
       </div>
@@ -305,7 +334,7 @@ if (isset($_POST['update'])) {
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-    <p class="mb-0">&copy; 2025 DropEx. All Rights Reserved. | Delivering Beyond Borders</p>
+    <p class="mb-0">&copy; 2025 Ummi's tracking. All Rights Reserved. | Delivering Beyond Borders</p>
     <div class="d-flex gap-3">
       <a href="index.php">Home</a>
       <a href="tracking.php">Tracking</a>

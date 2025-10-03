@@ -100,7 +100,7 @@ $feedback_result = mysqli_query($conn, $feedback_sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DropEx Admin</title>
+    <title>Ummi's tracking Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -114,7 +114,7 @@ $feedback_result = mysqli_query($conn, $feedback_sql);
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">DropEx Admin</a>
+            <a class="navbar-brand" href="#">Ummi's tracking Admin</a>
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="admin_logout.php">Logout</a>
             </div>

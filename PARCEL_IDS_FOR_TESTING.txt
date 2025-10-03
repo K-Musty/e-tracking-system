@@ -1,0 +1,57 @@
+===============================================
+UMMI'S TRACKING - PARCEL IDs FOR TESTING
+===============================================
+
+Here are the available parcel tracking IDs you can use to test the tracking system:
+
+RECENT PARCELS (Nigerian Staff):
+--------------------------------
+792791 - Maryam Suleiman → Ahmed Bello (Bauchi → Lagos)
+630836 - Halima Usman → Emeka Nwankwo (Bauchi → Anambra) 
+414329 - Yakubu Garba → Chioma Okafor (Bauchi → FCT)
+
+DELIVERED PARCELS:
+------------------
+992828 - Khaled Mosaraf → Jhangir kabir (Bangladesh → Japan) ✅ DELIVERED
+992827 - Abir khan → Ahmed Ramim (Bangladesh → Japan) ✅ DELIVERED
+945173 - tahimul → Md harun khan (Bangladesh → Japan) ✅ DELIVERED
+
+IN TRANSIT PARCELS:
+-------------------
+992826 - tahimul → sdfsf (Bangladesh → Italy)
+898625 - tahimul → misbah (Bangladesh → Italy)
+860522 - tahmid → Rahim Ahamed Khan (Bangladesh → UK)
+841194 - tahimul → tghdfg (Bangladesh → Italy)
+804435 - Misbah → Neyamul (Bangladesh → Italy)
+
+OLDER PARCELS:
+--------------
+749949 - asfasf → dfsdf (Bangladesh → Italy)
+691780 - tahimul → fdgdfg (Bangladesh → Italy)
+674046 - tahimul → sdfsd (Bangladesh → Italy)
+667565 - asfasf → dfsdf (Bangladesh → Italy)
+637927 - tahmid → cvgbcb (Bangladesh → Italy)
+549849 - tahimul → dsfsdf (Bangladesh → Italy)
+544364 - tahmid → Abir (Bangladesh → Italy)
+478674 - tahimul → fgdfg (Bangladesh → Italy)
+459215 - tahmid → sdfd (Bangladesh → Italy)
+422046 - asfasf → dfsdf (Bangladesh → Italy)
+
+TESTING INSTRUCTIONS:
+---------------------
+1. Go to: http://localhost/e-tracking-system/tracking.php
+2. Enter any of the above tracking IDs
+3. Click "Track" to see the parcel status
+4. Try different IDs to see various statuses (Dispatched, Shipped, Out for Delivery, Delivered)
+
+RECOMMENDED TEST IDs:
+---------------------
+- 792791 (Nigerian staff - Amina Aliyu handling)
+- 992828 (Delivered status)
+- 630836 (Nigerian locations)
+- 414329 (Bauchi to FCT route)
+
+===============================================
+Last Updated: <?php echo date('Y-m-d H:i:s'); ?>
+
+===============================================

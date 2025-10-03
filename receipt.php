@@ -44,7 +44,7 @@ if(isset($_POST['back'])) {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>DropEx - Receipt</title>
+        <title>Ummi's tracking - Receipt</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="style/bootstrap.css">
@@ -130,7 +130,7 @@ if(isset($_POST['back'])) {
                 <a class="fa fa-instagram" href="#" style="border: none; text-decoration: none; margin: 0em 1em; color:black; font-size: xx-large;"></a>
                 <a class="fa fa-envelope" href="#" style="border: none; text-decoration: none; margin: 0em 1em; color:black; font-size: xx-large;"></a>
             </div>
-            <p class="credit" style="font-size: 20px; font-stretch: 3px; text-align: center; color: black;">©2025 DropEx.| Delivering Beyond Borders</p>
+            <p class="credit" style="font-size: 20px; font-stretch: 3px; text-align: center; color: black;">©2025 Ummi's tracking.| Delivering Beyond Borders</p>
         </div>
     </body>
 </html>

@@ -173,12 +173,13 @@ $delivered = $result ? mysqli_fetch_all($result, MYSQLI_ASSOC) : [];
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>DropEx — Staff Dashboard</title>
+  <title>Ummi's tracking — Staff Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Fonts & Bootstrap 5 -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style/logo.css" rel="stylesheet">
 
   <!-- SweetAlert -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -206,7 +207,21 @@ $delivered = $result ? mysqli_fetch_all($result, MYSQLI_ASSOC) : [];
 <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="index.php">
-      <img src="Images/logo.png" alt="DropEx" style="height:44px">
+      <div class="navbar-brand-logo" style="display: inline-flex;">
+      <div class="logo-icon">
+        <div class="package-icon"></div>
+        <div class="tracking-dots">
+          <div class="tracking-dot"></div>
+          <div class="tracking-dot"></div>
+          <div class="tracking-dot"></div>
+        </div>
+      </div>
+      <div class="logo-text">
+        <div class="logo-main-text">Ummi's</div>
+        <div class="logo-sub-text">tracking</div>
+        <div class="logo-decorative-line"></div>
+      </div>
+    </div>
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topnav">
@@ -497,7 +512,7 @@ $delivered = $result ? mysqli_fetch_all($result, MYSQLI_ASSOC) : [];
 <footer class="mt-4">
   <div class="container">
     <div class="text-center small text-muted py-3">
-      &copy; 2025 DropEx. All Rights Reserved. | Delivering Beyond Borders
+      &copy; 2025 Ummi's tracking. All Rights Reserved. | Delivering Beyond Borders
     </div>
   </div>
 </footer>

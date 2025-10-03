@@ -1,0 +1,132 @@
+/* Modern Navbar Styles for Ummi's tracking */
+
+:root{
+  --brand:#0A3D62;
+  --brand-2:#0F5CA8;
+  --brand-3:#F8FAFC;
+  --highlight:#FAD02C;
+  --ink:#1F2937;
+  --muted:#6B7280;
+}
+
+/* Modern Navbar */
+.navbar { 
+  backdrop-filter: saturate(180%) blur(20px); 
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%)!important;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 12px 0;
+}
+
+.navbar-brand-text {
+  font-weight: 700;
+  color: white;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.nav-link-modern {
+  font-weight: 500;
+  color: rgba(255,255,255,0.9)!important;
+  padding: 8px 16px!important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin: 0 2px;
+  text-decoration: none;
+}
+
+.nav-link-modern:hover {
+  color: white!important;
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.nav-link-modern.active {
+  color: white!important;
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.btn-login {
+  background: var(--highlight);
+  color: var(--brand)!important;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background: #E6B800;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(250, 208, 44, 0.3);
+  color: var(--brand)!important;
+}
+
+.btn-logout {
+  background: rgba(239, 68, 68, 0.1);
+  color: #EF4444!important;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-logout:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #DC2626!important;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.dropdown-item {
+  border-radius: 8px;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: var(--brand-3);
+  color: var(--brand);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 4px 8px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .nav-link-modern {
+    margin: 4px 0;
+  }
+  
+  .btn-login, .btn-logout {
+    margin-top: 8px;
+    width: 100%;
+    text-align: center;
+  }
+}

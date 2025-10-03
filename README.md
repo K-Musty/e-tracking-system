@@ -1,6 +1,6 @@
-# DropEx-Logistics
+# Ummi's tracking-Logistics
 
-Welcome to **DropEx**, an efficient and seamless logistics management system. DropEx provides both online and offline services to ensure hassle-free package management, tracking, and dispatching. With real-time updates, optimized routing, and a user-friendly interface, DropEx is designed for customers and service providers alike.
+Welcome to **Ummi's tracking**, an efficient and seamless logistics management system. Ummi's tracking provides both online and offline services to ensure hassle-free package management, tracking, and dispatching. With real-time updates, optimized routing, and a user-friendly interface, Ummi's tracking is designed for customers and service providers alike.
 
 
 ## Features
@@ -17,17 +17,17 @@ Welcome to **DropEx**, an efficient and seamless logistics management system. Dr
 ### **Admin Panel**
 - Add and remove employees from the system.
 - Monitor feedback provided by customers.
-- Oversee all operational aspects of DropEx.
+- Oversee all operational aspects of Ummi's tracking.
 
 ### **Feedback System**
-- Customers can leave feedback about their experience with DropEx.
+- Customers can leave feedback about their experience with Ummi's tracking.
 - Feedback is accessible to administrators for quality improvement.
 
 
 ## How to Use
 
 ### **For Customers:**
-1. Create an account via the DropEx website.
+1. Create an account via the Ummi's tracking website.
 2. Request a delivery by providing package details.
 3. Track your parcel in real-time.
 4. Leave feedback about your experience.

@@ -1,0 +1,197 @@
+/* Ummi's Tracking Logo Styles */
+
+.navbar-brand-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #0A3D62 0%, #0F5CA8 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(10, 61, 98, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-brand-logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.navbar-brand-logo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(10, 61, 98, 0.4);
+    text-decoration: none !important;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.package-icon {
+    width: 18px;
+    height: 14px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.package-icon::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border: 1.5px solid rgba(255,255,255,0.7);
+    border-radius: 2px;
+}
+
+.package-icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1.5px;
+    height: 100%;
+    background: rgba(255,255,255,0.7);
+    transform: translateX(-50%);
+}
+
+.tracking-dots {
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.tracking-dot {
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.tracking-dot:nth-child(1) {
+    width: 4px;
+    height: 4px;
+    background: #FAD02C;
+    animation-delay: 0s;
+}
+
+.tracking-dot:nth-child(2) {
+    width: 3px;
+    height: 3px;
+    background: rgba(255,255,255,0.8);
+    animation-delay: 0.3s;
+}
+
+.tracking-dot:nth-child(3) {
+    width: 2px;
+    height: 2px;
+    background: rgba(255,255,255,0.6);
+    animation-delay: 0.6s;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.2); }
+}
+
+.logo-text {
+    color: white;
+    position: relative;
+    z-index: 2;
+    line-height: 1;
+}
+
+.logo-main-text {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Inter', 'Arial', sans-serif;
+    letter-spacing: -0.5px;
+}
+
+.logo-sub-text {
+    font-size: 11px;
+    color: #FAD02C;
+    margin: 0;
+    opacity: 0.9;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+}
+
+.logo-decorative-line {
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, #FAD02C 0%, transparent 100%);
+    margin-top: 2px;
+    border-radius: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand-logo {
+        padding: 6px 12px;
+    }
+    
+    .logo-main-text {
+        font-size: 18px;
+    }
+    
+    .logo-sub-text {
+        font-size: 10px;
+    }
+    
+    .logo-icon {
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+    }
+    
+    .package-icon {
+        width: 16px;
+        height: 12px;
+    }
+}
+
+/* Alternative simple text logo for smaller spaces */
+.navbar-brand-simple {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0A3D62 !important;
+    text-decoration: none !important;
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand-simple .highlight {
+    color: #FAD02C;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.navbar-brand-simple:hover {
+    color: #0F5CA8 !important;
+    text-decoration: none !important;
+}

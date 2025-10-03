@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>DropEx — Delivering Beyond Borders</title>
+  <title>Ummi's tracking — Delivering Beyond Borders</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Fonts & Icons -->
@@ -65,6 +65,9 @@ if (isset($_POST['submit'])) {
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Logo Styles -->
+  <link href="style/logo.css" rel="stylesheet">
 
   <!-- SweetAlert -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -81,9 +84,94 @@ if (isset($_POST['submit'])) {
       --glass:rgba(255,255,255,0.7);
     }
     html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); }
-    .navbar { backdrop-filter: saturate(180%) blur(6px); background: rgba(255,255,255,.85)!important; }
-    .nav-link { font-weight: 500; color: var(--ink)!important; }
-    .nav-link.active, .nav-link:hover { color: var(--brand-2)!important; }
+    
+    /* Modern Navbar */
+    .navbar { 
+      backdrop-filter: saturate(180%) blur(20px); 
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%)!important;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .navbar-brand-text {
+      font-weight: 700;
+      color: white;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    
+    .nav-link-modern {
+      font-weight: 500;
+      color: rgba(255,255,255,0.9)!important;
+      padding: 8px 16px!important;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      margin: 0 2px;
+    }
+    
+    .nav-link-modern:hover {
+      color: white!important;
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-1px);
+    }
+    
+    .nav-link-modern.active {
+      color: white!important;
+      background: rgba(255,255,255,0.15);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .btn-login {
+      background: var(--highlight);
+      color: var(--brand)!important;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-login:hover {
+      background: #E6B800;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(250, 208, 44, 0.3);
+    }
+    
+    .btn-logout {
+      background: rgba(239, 68, 68, 0.1);
+      color: #EF4444!important;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .btn-logout:hover {
+      background: rgba(239, 68, 68, 0.2);
+      color: #DC2626!important;
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+    
+    .dropdown-menu {
+      border: none;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      border-radius: 12px;
+      padding: 8px;
+      margin-top: 8px;
+    }
+    
+    .dropdown-item {
+      border-radius: 8px;
+      padding: 10px 16px;
+      transition: all 0.3s ease;
+    }
+    
+    .dropdown-item:hover {
+      background: var(--brand-3);
+      color: var(--brand);
+    }
 
     /* Hero */
     .hero {
@@ -157,31 +245,62 @@ if (isset($_POST['submit'])) {
 <body>
 
 <!-- NAV -->
-<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+<nav class="navbar navbar-expand-lg sticky-top shadow-lg">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.php" aria-label="DropEx Home">
-      <img src="Images/logo.png" alt="DropEx" style="height:44px">
+    <a class="navbar-brand d-flex align-items-center" href="index.php" aria-label="Ummi's tracking Home">
+      <img src="Images/logo.svg" alt="Ummi's tracking" style="height: 45px; width: auto;" class="me-2">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class='bx bx-menu text-white fs-4'></i>
     </button>
     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-        <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="tracking.php">Tracking</a></li>
-        <li class="nav-item"><a class="nav-link" href="branches.php">Branches</a></li>
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item">
+          <a class="nav-link nav-link-modern active" href="index.php">
+            <i class='bx bx-home me-1'></i>Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-modern" href="tracking.php">
+            <i class='bx bx-search-alt me-1'></i>Tracking
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-modern" href="branches.php">
+            <i class='bx bx-buildings me-1'></i>Branches
+          </a>
+        </li>
         <?php if (isset($_SESSION['id']) || isset($_SESSION['user_id'])): ?>
           <?php if (isset($_SESSION['id'])): ?>
-            <li class="nav-item"><a class="nav-link" href="staff.php">Dashboard</a></li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-modern" href="staff.php">
+                <i class='bx bx-briefcase me-1'></i>Dashboard
+              </a>
+            </li>
           <?php else: ?>
-            <li class="nav-item"><a class="nav-link" href="user_dashboard.php">Dashboard</a></li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-modern" href="user_dashboard.php">
+                <i class='bx bx-user-circle me-1'></i>Dashboard
+              </a>
+            </li>
           <?php endif; ?>
           <li class="nav-item ms-lg-2">
-            <a class="nav-link text-danger" href="logout.php" id="logoutLink"><i class='bx bx-log-out-circle me-1'></i> Logout</a>
+            <a class="btn btn-logout" href="logout.php" id="logoutLink">
+              <i class='bx bx-log-out me-1'></i>Logout
+            </a>
           </li>
         <?php else: ?>
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-sm btn-outline-primary px-3" href="login.php">DropEx Login</a>
+          <li class="nav-item ms-lg-2">
+            <div class="dropdown">
+              <button class="btn btn-login dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                <i class='bx bx-log-in me-1'></i>Login
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="user_login.php"><i class='bx bx-user me-2'></i>User Portal</a></li>
+                <li><a class="dropdown-item" href="login.php"><i class='bx bx-briefcase me-2'></i>Staff Portal</a></li>
+                <li><a class="dropdown-item" href="admin_login.php"><i class='bx bx-shield-alt-2 me-2'></i>Admin Portal</a></li>
+              </ul>
+            </div>
           </li>
         <?php endif; ?>
       </ul>
@@ -202,9 +321,9 @@ if (isset($_POST['submit'])) {
           <span class="text-warning">3PL Logistics</span> in Nigeria
         </h1>
         <p class="lead mt-3 opacity-90">
-          DropEx is a prototype <strong>E-Tracking System</strong> designed for third-party logistics (3PL) operators.  
+          Ummi's tracking is a prototype <strong>E-Tracking System</strong> designed for third-party logistics (3PL) operators (GIG and NIPOST).  
           Built to address challenges of <em>manual waybills, lack of real-time tracking, and customer dissatisfaction</em>,  
-          DropEx enables transparent, fast, and reliable parcel management.
+          Ummi's tracking enables transparent, fast, and reliable parcel management.
         </p>
 
         <div class="hero-cta d-flex flex-wrap gap-2 mt-4">
@@ -230,8 +349,8 @@ if (isset($_POST['submit'])) {
 
       <!-- Right Image Section -->
       <div class="col-lg-5">
-        <img src="Images/bigp.jpg" 
-             alt="DropEx prototype system" 
+        <img src="Images/bigp.svg" 
+             alt="Ummi's tracking prototype system" 
              class="img-fluid rounded-4 shadow-lg border border-3 border-white" />
         <div class="mt-3 p-3 bg-dark bg-opacity-75 text-white rounded-3 shadow-sm">
           <h6 class="mb-1">Research Context</h6>
@@ -251,7 +370,7 @@ if (isset($_POST['submit'])) {
     <div class="row mb-4">
       <div class="col-lg-8">
         <h2 class="fw-bold">Services Available</h2>
-        <p class="muted">Discover logistics options from DropEx Global Forwarding, tailored for businesses of all sizes.</p>
+        <p class="muted">Discover logistics options from Ummi's tracking Global Forwarding, tailored for businesses of all sizes.</p>
       </div>
     </div>
 
@@ -301,10 +420,10 @@ if (isset($_POST['submit'])) {
     <div class="row g-4 align-items-center">
       <div class="col-lg-6">
         <div class="card-soft p-4 p-md-5">
-          <h2 class="fw-bold mb-3 text-dark">About DropEx</h2>
+          <h2 class="fw-bold mb-3 text-dark">About Ummi's tracking</h2>
           <p>
-            <strong>DropEx</strong> is more than a logistics provider—it is an <em>E-Tracking System</em> 
-            designed to bring digital transformation to third-party logistics (3PL) in Nigeria and beyond.  
+            <strong>Ummi's tracking</strong> is more than a logistics provider—it is an <em>E-Tracking System</em> 
+            designed to bring digital transformation to third-party logistics (3PL) operators (GIG and NIPOST) in Nigeria and beyond.  
             Our platform enables real-time parcel tracking, transparent supply chains, and customer trust.
           </p>
           <p>
@@ -312,7 +431,7 @@ if (isset($_POST['submit'])) {
             technology, and efficiency—delivering end-to-end solutions from parcels to bulk freight, 
             while reducing fraud, delays, and uncertainty in logistics.
           </p>
-          <h5 class="mt-3">Why Choose DropEx?</h5>
+          <h5 class="mt-3">Why Choose Ummi's tracking?</h5>
           <ul class="mt-2">
             <li><strong>Real-time tracking</strong> with instant status updates.</li>
             <li><strong>Global reach</strong> across major hubs and local networks.</li>
@@ -323,14 +442,14 @@ if (isset($_POST['submit'])) {
         </div>
       </div>
       <div class="col-lg-6">
-        <img src="Images/aboutus.jpeg" alt="About DropEx" class="img-fluid rounded-4 shadow-sm mb-3">
+        <img src="Images/aboutus.svg" alt="About Ummi's tracking" class="img-fluid rounded-4 shadow-sm mb-3">
         <div class="row g-3">
-          <div class="col-4"><img src="Images/last.png"   alt="Gallery" class="img-fluid rounded-3"></div>
-          <div class="col-4"><img src="Images/icon2.jpeg" alt="Gallery" class="img-fluid rounded-3"></div>
-          <div class="col-4"><img src="Images/worker.jpeg"alt="Gallery" class="img-fluid rounded-3"></div>
-          <div class="col-4"><img src="Images/icon4.jpg"  alt="Gallery" class="img-fluid rounded-3"></div>
-          <div class="col-4"><img src="Images/icon5.jpeg" alt="Gallery" class="img-fluid rounded-3"></div>
-          <div class="col-4"><img src="Images/icon1.jpeg" alt="Gallery" class="img-fluid rounded-3"></div>
+          <div class="col-4"><img src="Images/last.svg"   alt="Gallery" class="img-fluid rounded-3"></div>
+          <div class="col-4"><img src="Images/icon2.svg" alt="Gallery" class="img-fluid rounded-3"></div>
+          <div class="col-4"><img src="Images/worker.svg"alt="Gallery" class="img-fluid rounded-3"></div>
+          <div class="col-4"><img src="Images/icon4.svg"  alt="Gallery" class="img-fluid rounded-3"></div>
+          <div class="col-4"><img src="Images/icon5.svg" alt="Gallery" class="img-fluid rounded-3"></div>
+          <div class="col-4"><img src="Images/icon1.svg" alt="Gallery" class="img-fluid rounded-3"></div>
         </div>
       </div>
     </div>
@@ -343,7 +462,7 @@ if (isset($_POST['submit'])) {
   <div class="container">
     <div class="text-center mb-4">
       <h2 class="fw-bold">Employee of the Month</h2>
-      <p class="muted">Celebrating excellence and outstanding contributions at DropEx.</p>
+      <p class="muted">Celebrating excellence and outstanding contributions at Ummi's tracking.</p>
     </div>
 
     <?php if (!empty($empmonth)): ?>
@@ -351,7 +470,7 @@ if (isset($_POST['submit'])) {
         <?php foreach ($empmonth as $emp): ?>
           <div class="col-md-6 col-lg-4">
             <div class="card-soft p-4 h-100 text-center">
-              <img src="Images/ofthemonth.png" alt="Award" class="img-fluid rounded-3 mb-3">
+              <img src="Images/ofthemonth.svg" alt="Award" class="img-fluid rounded-3 mb-3">
               <h5 class="fw-bold text-warning mb-1"><?php echo e($emp['Name']); ?></h5>
               <p class="mb-1">Staff ID: <strong><?php echo e($emp['StaffID']); ?></strong></p>
               <p class="mb-0">Credits: <strong><?php echo e($emp['Credits']); ?></strong></p>
@@ -410,7 +529,7 @@ if (isset($_POST['submit'])) {
 <footer>
   <div class="container">
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-      <p class="mb-0">&copy; 2025 DropEx. All Rights Reserved. | Delivering Beyond Borders</p>
+      <p class="mb-0">&copy; 2025 Ummi's tracking. All Rights Reserved. | Delivering Beyond Borders</p>
       <div class="d-flex gap-3">
         <a href="index.php">Home</a>
         <a href="tracking.php">Tracking</a>

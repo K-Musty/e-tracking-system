@@ -83,53 +83,285 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
+  <title>Ummi's tracking — User Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DropEx — User Login</title>
 
-  <!-- Fonts & Bootstrap -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Logo Styles -->
+  <link href="style/logo.css" rel="stylesheet">
 
+  <!-- Custom styles -->
   <style>
-    body {
-      font-family: Inter, sans-serif;
-      background: url('Images/DropExBack.jpg') no-repeat center center fixed;
-      background-size: cover;
+    :root{
+      --brand:#0A3D62;
+      --brand-2:#0F5CA8;
+      --brand-3:#F8FAFC;
+      --highlight:#FAD02C;
+      --ink:#1F2937;
+      --muted:#6B7280;
+      --glass:rgba(255,255,255,0.7);
+    }
+    
+    html, body { 
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; 
+      color: var(--ink);
       min-height: 100vh;
-      display: flex; flex-direction: column;
     }
-    .auth-wrap {
-      flex: 1;
-      display: grid;
-      place-items: center;
-      padding: 2rem;
+    
+    .navbar { 
+      backdrop-filter: saturate(180%) blur(6px); 
+      background: rgba(255,255,255,.85)!important; 
     }
-    .auth-card {
-      max-width: 420px; width: 100%;
-      background: rgba(255,255,255,.95);
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    
+    .nav-link { 
+      font-weight: 500; 
+      color: var(--ink)!important; 
+    }
+    
+    .nav-link.active, .nav-link:hover { 
+      color: var(--brand-2)!important; 
+    }
+
+    /* Hero Background */
+    .auth-hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--brand) 0%, #0B4B86 40%, #0D6EFD 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
       overflow: hidden;
     }
-    .auth-head {
-      background: linear-gradient(135deg,#0A3D62 0%,#0F5CA8 100%);
-      color: #fff; padding: 1.5rem;
+
+    .auth-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      opacity: 0.3;
     }
-    .auth-body { padding: 1.5rem; }
-    .form-control { border-radius: 10px; padding: .75rem 1rem; }
-    .btn-pill { border-radius: 999px; padding: .75rem 1rem; font-weight: 600; }
-    .toggle-btns { display:flex; gap:10px; margin-bottom:1rem; }
-    .toggle-btns .btn { flex:1; }
+
+    /* Auth Card */
+    .auth-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .auth-card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      overflow: hidden;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .auth-header {
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .auth-header h1 {
+      color: var(--brand);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .auth-header p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .auth-body {
+      padding: 2rem;
+    }
+
+    /* Toggle Buttons */
+    .auth-toggle {
+      display: flex;
+      background: var(--brand-3);
+      border-radius: 12px;
+      padding: 4px;
+      margin-bottom: 2rem;
+    }
+
+    .auth-toggle button {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      color: var(--muted);
+    }
+
+    .auth-toggle button.active {
+      background: white;
+      color: var(--brand);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Form Styling */
+    .form-label {
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .form-control {
+      border-radius: 12px;
+      border: 2px solid #E5E7EB;
+      padding: 12px 16px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      background: white;
+    }
+
+    .form-control:focus {
+      border-color: var(--brand-2);
+      box-shadow: 0 0 0 3px rgba(15, 92, 168, 0.1);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+      border: none;
+      border-radius: 12px;
+      padding: 14px 24px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(10, 61, 98, 0.3);
+    }
+
+    .btn-outline-secondary {
+      border: 2px solid #E5E7EB;
+      color: var(--muted);
+      border-radius: 12px;
+      padding: 12px 24px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-secondary:hover {
+      border-color: var(--brand-2);
+      color: var(--brand-2);
+      background: rgba(15, 92, 168, 0.05);
+    }
+
+    /* Alternative Login Options */
+    .alt-login {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #E5E7EB;
+    }
+
+    .alt-login .btn {
+      border-radius: 12px;
+      padding: 12px 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .alt-login .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    /* Alert Styling */
+    .alert {
+      border-radius: 12px;
+      border: none;
+      padding: 16px 20px;
+      margin-bottom: 1.5rem;
+    }
+
+    .alert-danger {
+      background: rgba(239, 68, 68, 0.1);
+      color: #DC2626;
+      border-left: 4px solid #DC2626;
+    }
+
+    .alert-success {
+      background: rgba(34, 197, 94, 0.1);
+      color: #059669;
+      border-left: 4px solid #059669;
+    }
+
+    /* Floating Elements */
+    .floating-element {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .floating-element:nth-child(1) {
+      width: 80px;
+      height: 80px;
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .floating-element:nth-child(2) {
+      width: 60px;
+      height: 60px;
+      top: 60%;
+      right: 15%;
+      animation-delay: 2s;
+    }
+
+    .floating-element:nth-child(3) {
+      width: 40px;
+      height: 40px;
+      bottom: 20%;
+      left: 20%;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .auth-card {
+        margin: 1rem;
+        border-radius: 16px;
+      }
+      
+      .auth-header, .auth-body {
+        padding: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="navbar navbar-expand-lg sticky-top shadow-sm" style="background: rgba(255,255,255,.9)!important;">
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.php">
-      <img src="Images/logo.png" alt="DropEx" style="height:44px">
+    <a class="navbar-brand" href="index.php" aria-label="Ummi's tracking Home">
+      <img src="Images/logo.svg" alt="Ummi's tracking" style="height: 50px; width: auto;">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
       <span class="navbar-toggler-icon"></span>
@@ -139,67 +371,118 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])) {
         <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="tracking.php">Tracking</a></li>
         <li class="nav-item"><a class="nav-link" href="branches.php">Branches</a></li>
-        <li class="nav-item"><a class="nav-link active" href="user_login.php">User Login</a></li>
+        <li class="nav-item"><a class="nav-link active" href="user_login.php">User Portal</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- CONTENT -->
-<div class="auth-wrap">
-  <div class="auth-card">
-    <div class="auth-head text-center">
-      <h4 class="fw-bold mb-0">DropEx User Portal</h4>
-      <small class="opacity-75">Login or Register to continue</small>
-    </div>
+<!-- AUTH HERO -->
+<div class="auth-hero">
+  <!-- Floating Elements -->
+  <div class="floating-element"></div>
+  <div class="floating-element"></div>
+  <div class="floating-element"></div>
 
-    <div class="auth-body">
-      <?php if($error): ?><div class="alert alert-danger"><?php echo $error; ?></div><?php endif; ?>
-      <?php if($success): ?><div class="alert alert-success"><?php echo $success; ?></div><?php endif; ?>
+  <div class="container auth-container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="auth-card">
+          <div class="auth-header">
+            <h1><i class='bx bx-user-circle me-2'></i>User Portal</h1>
+            <p>Access your Ummi's tracking account</p>
+          </div>
 
-      <div class="toggle-btns">
-        <button class="btn btn-primary" onclick="showLogin()">Login</button>
-        <button class="btn btn-outline-secondary" onclick="showRegister()">Register</button>
+          <div class="auth-body">
+            <?php if($error): ?>
+              <div class="alert alert-danger">
+                <i class='bx bx-error-circle me-2'></i><?php echo htmlspecialchars($error); ?>
+              </div>
+            <?php endif; ?>
+            
+            <?php if($success): ?>
+              <div class="alert alert-success">
+                <i class='bx bx-check-circle me-2'></i><?php echo htmlspecialchars($success); ?>
+              </div>
+            <?php endif; ?>
+
+            <!-- Toggle Buttons -->
+            <div class="auth-toggle">
+              <button type="button" class="active" onclick="showLogin()" id="loginTab">
+                <i class='bx bx-log-in me-1'></i>Login
+              </button>
+              <button type="button" onclick="showRegister()" id="registerTab">
+                <i class='bx bx-user-plus me-1'></i>Register
+              </button>
+            </div>
+
+            <!-- Login Form -->
+            <form method="POST" id="loginForm">
+              <div class="mb-3">
+                <label class="form-label">
+                  <i class='bx bx-envelope me-1'></i>Email Address
+                </label>
+                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-4">
+                <label class="form-label">
+                  <i class='bx bx-lock-alt me-1'></i>Password
+                </label>
+                <input type="password" name="password" class="form-control" placeholder="Enter your password" required>
+              </div>
+              <button type="submit" name="login" class="btn btn-primary w-100">
+                <i class='bx bx-log-in me-2'></i>Login to Account
+              </button>
+            </form>
+
+            <!-- Register Form -->
+            <form method="POST" id="registerForm" style="display:none;">
+              <div class="mb-3">
+                <label class="form-label">
+                  <i class='bx bx-user me-1'></i>Full Name
+                </label>
+                <input type="text" name="reg_name" class="form-control" placeholder="Enter your full name" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">
+                  <i class='bx bx-at me-1'></i>Username
+                </label>
+                <input type="text" name="reg_username" class="form-control" placeholder="Choose a username" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">
+                  <i class='bx bx-envelope me-1'></i>Email Address
+                </label>
+                <input type="email" name="reg_email" class="form-control" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-4">
+                <label class="form-label">
+                  <i class='bx bx-lock-alt me-1'></i>Password
+                </label>
+                <input type="password" name="reg_password" class="form-control" placeholder="Create a password" required>
+              </div>
+              <button type="submit" name="register" class="btn btn-primary w-100">
+                <i class='bx bx-user-plus me-2'></i>Create Account
+              </button>
+            </form>
+
+            <!-- Alternative Login Options -->
+            <div class="alt-login">
+              <p class="text-center text-muted mb-3">
+                <small>Other login options</small>
+              </p>
+              <div class="d-grid gap-2">
+                <a href="admin_login.php" class="btn btn-outline-danger">
+                  <i class='bx bx-shield-alt-2 me-2'></i>Admin Portal
+                </a>
+                <a href="login.php" class="btn btn-outline-success">
+                  <i class='bx bx-briefcase me-2'></i>Staff Portal
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!-- Login -->
-      <form method="POST" id="loginForm">
-        <div class="mb-3">
-          <label class="form-label fw-semibold">Email</label>
-          <input type="email" name="email" class="form-control" required>
-        </div>
-        <div class="mb-3">
-          <label class="form-label fw-semibold">Password</label>
-          <input type="password" name="password" class="form-control" required>
-        </div>
-        <button type="submit" name="login" class="btn btn-primary btn-pill w-100">Login</button>
-
-        <div class="mt-3 d-grid gap-2">
-          <a href="admin_login.php" class="btn btn-outline-danger btn-pill">Admin Login</a>
-          <a href="login.php" class="btn btn-outline-success btn-pill">Staff Login</a>
-        </div>
-      </form>
-
-      <!-- Register -->
-      <form method="POST" id="registerForm" style="display:none;">
-        <div class="mb-3">
-          <label class="form-label fw-semibold">Full Name</label>
-          <input type="text" name="reg_name" class="form-control" required>
-        </div>
-        <div class="mb-3">
-          <label class="form-label fw-semibold">Username</label>
-          <input type="text" name="reg_username" class="form-control" required>
-        </div>
-        <div class="mb-3">
-          <label class="form-label fw-semibold">Email</label>
-          <input type="email" name="reg_email" class="form-control" required>
-        </div>
-        <div class="mb-3">
-          <label class="form-label fw-semibold">Password</label>
-          <input type="password" name="reg_password" class="form-control" required>
-        </div>
-        <button type="submit" name="register" class="btn btn-primary btn-pill w-100">Register</button>
-      </form>
     </div>
   </div>
 </div>
@@ -208,12 +491,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['register'])) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   function showLogin() {
-    document.getElementById('loginForm').style.display='block';
-    document.getElementById('registerForm').style.display='none';
+    document.getElementById('loginForm').style.display = 'block';
+    document.getElementById('registerForm').style.display = 'none';
+    document.getElementById('loginTab').classList.add('active');
+    document.getElementById('registerTab').classList.remove('active');
   }
+  
   function showRegister() {
-    document.getElementById('loginForm').style.display='none';
-    document.getElementById('registerForm').style.display='block';
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('registerForm').style.display = 'block';
+    document.getElementById('loginTab').classList.remove('active');
+    document.getElementById('registerTab').classList.add('active');
   }
 </script>
 </body>
